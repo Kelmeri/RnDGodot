@@ -111,6 +111,9 @@ var _dirty := _DIRTY_ALL
 func _ready():
 	is_ready = true
 
+	# Make the viewport texture transparent
+	$Viewport.transparent_bg = true
+
 	# Listen for pointer events on the screen body
 	$StaticBody3D.connect("pointer_event", _on_pointer_event)
 
