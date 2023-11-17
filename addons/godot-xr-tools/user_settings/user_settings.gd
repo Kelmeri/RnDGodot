@@ -9,6 +9,7 @@ enum WebXRPrimary {
 	AUTO,
 	THUMBSTICK,
 	TRACKPAD,
+	ACTION,
 }
 
 

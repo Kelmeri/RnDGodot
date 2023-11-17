@@ -33,7 +33,7 @@ signal xr_ended
 @export var render_target_size_multiplier : float = 1.0
 
 ## If true, the XR passthrough is enabled (OpenXR only)
-@export var enable_passthrough : bool = false: set = _set_enable_passthrough
+@export var enable_passthrough : bool = true: set = _set_enable_passthrough
 
 ## Physics rate multiplier compared to HMD frame rate
 @export var physics_rate_multiplier : int = 1
@@ -124,6 +124,12 @@ func _setup_for_openxr() -> bool:
 # Handle OpenXR session ready
 func _on_openxr_session_begun() -> void:
 	print("OpenXR: Session begun")
+	_set_enable_passthrough(true)
+	# Set the passthrough on top of the viewport
+	# NOTE: Only implemented in Godot 4.1+
+#	xr_interface.passthrough_on_top = true
+	
+
 
 	# Get the reported refresh rate
 	_current_refresh_rate = xr_interface.get_display_refresh_rate()
@@ -284,3 +290,30 @@ func _find_closest(values : Array, target : float) -> float:
 
 	# Return the best value
 	return best
+
+### Enable passthrough functionality based on XR capabilities
+#func enable_passthrough() -> bool:
+#	var xr_interface: XRInterface = XRServer.primary_interface
+#
+#	# Check if the XR interface is available
+#	if xr_interface:
+#		# Check if passthrough is supported
+#		if xr_interface.is_passthrough_supported():
+#			# Enable passthrough for OpenXR
+#			if !xr_interface.start_passthrough():
+#				return false
+#			else:
+#				# Check for supported blend modes for AR passthrough
+#				var modes = xr_interface.get_supported_environment_blend_modes()
+#				if xr_interface.XR_ENV_BLEND_MODE_ALPHA_BLEND in modes:
+#					xr_interface.set_environment_blend_mode(xr_interface.XR_ENV_BLEND_MODE_ALPHA_BLEND)
+#				else:
+#					return false
+#
+#		# Set the viewport background to transparent
+#		get_viewport().transparent_bg = true
+#		return true
+#	else:
+#        # Handle the case where the XR interface is not available
+#		print("XR interface not found")
+#		return false

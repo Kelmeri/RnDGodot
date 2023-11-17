@@ -13,9 +13,13 @@ extends PersistentStaging
 func _ready():
 	super()
 
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	
 	# Do not initialise if in the editor
 	if Engine.is_editor_hint():
 		return
+
+	get_tree().get_root().transparent_bg = true
 
 	# Connect events
 	scene_loaded.connect(_on_scene_loaded)

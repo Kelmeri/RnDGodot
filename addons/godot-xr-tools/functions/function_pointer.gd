@@ -415,11 +415,31 @@ func _update_pointer() -> void:
 
 # Pointer-activation button pressed handler
 func _button_pressed() -> void:
+	var localized_ScreenShotterPath = "res://assets/ScreenShotter/ScreenShotter.exe"
+	var os_path = ProjectSettings.globalize_path(localized_ScreenShotterPath)
+	print (localized_ScreenShotterPath)
+	var output = []
+	await OS.execute(os_path, [], output, true)
+	print (output)
+	if output == [["1/r/n"]]:
+		print ("1")
+	elif output == [["2/r/n"]]:
+		print ("2")
+	elif output == [["3/r/n"]]:
+		print ("3")
+	elif output == [["4/r/n"]]:
+		print ("4")
+	else:
+		print (output)
+
+	
 	if $RayCast.is_colliding():
 		# Report pressed
 		target = $RayCast.get_collider()
 		last_collided_at = $RayCast.get_collision_point()
 		XRToolsPointerEvent.pressed(self, target, last_collided_at)
+
+# func process_openxr_frame(frame):
 
 
 # Pointer-activation button released handler

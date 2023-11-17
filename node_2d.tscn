@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ehqbua5m30p"]
+
+[ext_resource type="Script" path="res://Webcam.gd" id="1_lkurr"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c2yal"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_lkurr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_c2yal")
