@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://cgox6iuonbvpg"]
+
+[ext_resource type="Texture2D" uid="uid://dt3omngb6h0i0" path="res://assets/Textures/table_low/table_low_DefaultMaterial_BaseColor.png" id="1_caews"]
+[ext_resource type="Texture2D" uid="uid://nov7c0actppy" path="res://assets/Textures/table_low/table_low_DefaultMaterial_AO.png" id="2_nqfyq"]
+[ext_resource type="Texture2D" uid="uid://cl5yah3kfhu1a" path="res://assets/Textures/table_low/table_low_DefaultMaterial_Height.png" id="3_g227n"]
+[ext_resource type="Texture2D" uid="uid://b4ks6orcre30g" path="res://assets/Textures/table_low/table_low_DefaultMaterial_Metallic.png" id="4_8n7kj"]
+[ext_resource type="Texture2D" uid="uid://10vruh6mfc3s" path="res://assets/Textures/table_low/table_low_DefaultMaterial_Normal.png" id="5_oq2ht"]
+[ext_resource type="Texture2D" uid="uid://buvvs75ma1t3w" path="res://assets/Textures/table_low/table_low_DefaultMaterial_Roughness.png" id="6_q10we"]
+
+[resource]
+albedo_texture = ExtResource("1_caews")
+metallic = 1.0
+metallic_texture = ExtResource("4_8n7kj")
+roughness_texture = ExtResource("6_q10we")
+normal_enabled = true
+normal_texture = ExtResource("5_oq2ht")
+ao_enabled = true
+ao_texture = ExtResource("2_nqfyq")
+heightmap_scale = 4.535
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("3_g227n")

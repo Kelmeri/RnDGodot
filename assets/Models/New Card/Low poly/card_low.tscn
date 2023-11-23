@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvjwy8tp7l8re"]
+
+[ext_resource type="PackedScene" uid="uid://c6mbnk47lgmsd" path="res://assets/Models/New Card/Low poly/card_low.fbx" id="1_k6di6"]
+[ext_resource type="Material" uid="uid://b5s3imvmig1lk" path="res://assets/Materials/M_card_low.tres" id="2_tv3lq"]
+
+[node name="card_low" instance=ExtResource("1_k6di6")]
+
+[node name="Card_low" parent="RootNode" index="0"]
+surface_material_override/0 = ExtResource("2_tv3lq")
