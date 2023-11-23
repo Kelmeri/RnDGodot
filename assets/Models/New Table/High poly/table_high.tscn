@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://kmnp2wds3s5a"]
+[gd_scene load_steps=4 format=3 uid="uid://kmnp2wds3s5a"]
 
 [ext_resource type="PackedScene" uid="uid://b7gr7y8g5l2m3" path="res://assets/Models/New Table/High poly/table_high.fbx" id="1_j1ohh"]
 [ext_resource type="Material" uid="uid://b657mt25b0bfn" path="res://assets/Materials/M_table_high.tres" id="2_e1cky"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_irl8j"]
+size = Vector3(1.99945, 0.697339, 1.17748)
 
 [node name="table_high" instance=ExtResource("1_j1ohh")]
 
 [node name="Table_high" parent="RootNode" index="0"]
 surface_material_override/0 = ExtResource("2_e1cky")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+disable_mode = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.377294, 0)
+shape = SubResource("BoxShape3D_irl8j")
