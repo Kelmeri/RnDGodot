@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhs256r08o0ug"]
+
+[ext_resource type="PackedScene" uid="uid://u7iel2fltdwq" path="res://assets/Models/Card.glb" id="1_dx5rc"]
+[ext_resource type="Texture2D" uid="uid://cffs8gl3u6slc" path="res://assets/Textures/T_CardB_C.png" id="2_mcql3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tp2j7"]
+albedo_texture = ExtResource("2_mcql3")
+
+[node name="CardA" instance=ExtResource("1_dx5rc")]
+
+[node name="PlayingCard" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_tp2j7")

@@ -1,80 +1,78 @@
-[gd_scene load_steps=39 format=3 uid="uid://cjat5u6nsihgw"]
+[gd_scene load_steps=38 format=3 uid="uid://cjat5u6nsihgw"]
 
 [ext_resource type="PackedScene" uid="uid://cvn48xcmsmkrb" path="res://game/zones/zone_base.tscn" id="1_sk0kv"]
 [ext_resource type="Material" uid="uid://c7prktlpm7tmm" path="res://assets/prototype_materials/forest.tres" id="3_wfk2d"]
 [ext_resource type="Resource" uid="uid://to5lown6orfd" path="res://game/zones/outside/outside_zone_info.tres" id="3_wyepd"]
 [ext_resource type="Script" path="res://components/helpers/scatter.gd" id="4_v2d8i"]
-[ext_resource type="Material" uid="uid://c386ygo86nqfc" path="res://assets/prototype_materials/wood_brown.tres" id="4_yw2go"]
-[ext_resource type="Material" uid="uid://cjylinr1vdjcw" path="res://assets/prototype_materials/dark_brown.tres" id="5_peq87"]
 [ext_resource type="Material" uid="uid://ccdofvku4c7w3" path="res://assets/prototype_materials/stone_grey.tres" id="6_y2a7s"]
-[ext_resource type="PackedScene" uid="uid://vm423o6hdlya" path="res://components/helpers/zone_switch_area.tscn" id="7_omnq0"]
 [ext_resource type="Environment" uid="uid://er867l7dl10j" path="res://default_env.tres" id="8_82q6b"]
-[ext_resource type="PackedScene" uid="uid://c4rpcr7s5pt3v" path="res://game/items/rock/rock.tscn" id="12_cxbia"]
-[ext_resource type="PackedScene" uid="uid://chch4r7wddwdj" path="res://game/objects/storage/storage_box.tscn" id="13_galon"]
-[ext_resource type="PackedScene" uid="uid://dbepe4i2q62yy" path="res://game/items/crate/crate.tscn" id="13_mtgv7"]
+[ext_resource type="PackedScene" uid="uid://qmcth4ysh78e" path="res://network_main.tscn" id="9_qe2b5"]
+[ext_resource type="PackedScene" uid="uid://bnhlgpj4awr36" path="res://card_a.tscn" id="11_pmr0i"]
+[ext_resource type="PackedScene" uid="uid://dhs256r08o0ug" path="res://card_b.tscn" id="12_n25ne"]
+[ext_resource type="PackedScene" uid="uid://d03j8ao7gslpo" path="res://card_c.tscn" id="13_2hm4j"]
 [ext_resource type="PackedScene" uid="uid://b0hps8dl5jmd3" path="res://assets/Models/Table/Table.glb" id="14_0wjmx"]
-[ext_resource type="PackedScene" uid="uid://c33bpwxnrb0gr" path="res://game/items/toolbox/toolbox.tscn" id="14_68l3l"]
 [ext_resource type="PackedScene" uid="uid://cmw025hpaa1ll" path="res://assets/_Prefabs/card.tscn" id="15_eniy3"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="16_okaiu"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vkd16"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g5rjk"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e7aji"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p1lbm"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_u0f7i"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_itkx8"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8sl32"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0triu"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_53n4h"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_hhvur"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ejjx6"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8gdg8"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_vkd16")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_g5rjk")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_e7aji")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_p1lbm")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_u0f7i")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_itkx8")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_8sl32")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_0triu")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_53n4h")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_hhvur")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3sjft"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kxtdy"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j5qfg"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a66h0"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_wu1m0"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_7x27c"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cqoj5"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_h1ntl"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_tgqbp"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_nlhh1"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tvuhd"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pmc87"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_3sjft")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_kxtdy")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_j5qfg")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_a66h0")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_wu1m0")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_7x27c")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_cqoj5")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_h1ntl")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_tgqbp")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_nlhh1")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -109,24 +107,80 @@ rings = 3
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f4wyk"]
 points = PackedVector3Array(-1.7634, 0, -2.42705, -1.24728, -1.41425, -1.71626, -2.85317, 0, 0.926607, -1.24728, 1.41386, -1.71626, 1.76284, 0, -2.42705, 1.24673, -1.41425, -1.71626, 0, -2, -0.000390053, -2.01755, -1.41425, 0.655149, -2.01755, 1.41386, 0.655149, 0, 0, 3, 0, 2, -0.000390053, 1.24673, 1.41386, -1.71626, 2.85317, 0, 0.926607, 2.01699, -1.41425, 0.655149, 0, -1.41425, 2.12081, 0, 1.41386, 2.12081, 2.01699, 1.41386, 0.655149)
 
-[sub_resource type="BoxMesh" id="BoxMesh_s0cu3"]
-material = ExtResource("5_peq87")
-size = Vector3(1, 3, 0.2)
+[sub_resource type="QuadMesh" id="QuadMesh_hlifd"]
+resource_local_to_scene = true
+size = Vector2(3, 2)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lsqhn"]
-size = Vector3(1, 3, 0.1)
+[sub_resource type="ViewportTexture" id="ViewportTexture_le15a"]
+viewport_path = NodePath("Viewport")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wdgkd"]
-size = Vector3(1, 3, 0.2)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfqbg"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_le15a")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7r2do"]
+resource_local_to_scene = true
+size = Vector3(3, 2, 0.02)
 
 [node name="OutsideZone" instance=ExtResource("1_sk0kv")]
 zone_info = ExtResource("3_wyepd")
 
+[node name="Skeleton3D" parent="XROrigin3D/LeftHand/CollisionHandLeft/LeftHand/Hand_Nails_low_L/Armature" index="0"]
+bones/1/rotation = Quaternion(0.323537, -2.56577e-05, -0.0272204, 0.945824)
+bones/2/rotation = Quaternion(-0.0904441, -0.0415175, -0.166293, 0.981042)
+bones/3/rotation = Quaternion(-0.0466199, 0.020971, 0.0103276, 0.998639)
+bones/5/rotation = Quaternion(-0.00128455, -0.0116081, -0.0168259, 0.99979)
+bones/6/rotation = Quaternion(0.102925, -0.00993208, -0.00794417, 0.994608)
+bones/7/rotation = Quaternion(-0.012859, -0.0236108, -0.323258, 0.945929)
+bones/8/rotation = Quaternion(0.0120575, -0.00929194, -0.247472, 0.968775)
+bones/10/rotation = Quaternion(-0.0357539, -0.000400032, 0.00636764, 0.99934)
+bones/11/rotation = Quaternion(-0.00264964, -0.00114471, -0.125992, 0.992027)
+bones/12/rotation = Quaternion(0.0394225, 0.00193393, -0.228074, 0.972843)
+bones/13/rotation = Quaternion(-0.0123395, -0.00881294, -0.280669, 0.959685)
+bones/15/rotation = Quaternion(-0.0702656, 0.0101908, -0.0243307, 0.99718)
+bones/16/rotation = Quaternion(-0.0320634, -0.00223624, -0.0686366, 0.997124)
+bones/17/rotation = Quaternion(0.0253452, 0.00812462, -0.249005, 0.968136)
+bones/18/rotation = Quaternion(0.00252232, 0.00788073, -0.243204, 0.96994)
+bones/20/rotation = Quaternion(-0.0917369, 0.0203027, -0.010183, 0.995524)
+bones/21/rotation = Quaternion(-0.0625182, -0.00022572, -0.115393, 0.991351)
+bones/22/rotation = Quaternion(0.0585786, 0.0216483, -0.269905, 0.96086)
+bones/23/rotation = Quaternion(0.00687177, -0.00357275, -0.211953, 0.977249)
+
+[node name="BoneAttachment3D" parent="XROrigin3D/LeftHand/CollisionHandLeft/LeftHand/Hand_Nails_low_L/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.54083, 0.840813, -0.0231736, -0.0826267, 0.0805243, 0.993322, 0.837064, -0.535303, 0.113023, 0.039902, 0.0402828, -0.150096)
+
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/CollisionHandLeft/LeftHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_ejjx6")
+tree_root = SubResource("AnimationNodeBlendTree_8gdg8")
+
+[node name="Skeleton3D" parent="XROrigin3D/RightHand/CollisionHandRight/RightHand/Hand_Nails_low_R/Armature" index="0"]
+bones/1/rotation = Quaternion(0.323537, 2.56577e-05, 0.0272204, 0.945824)
+bones/2/rotation = Quaternion(-0.0904441, 0.0415175, 0.166293, 0.981042)
+bones/3/rotation = Quaternion(-0.0466199, -0.020971, -0.0103276, 0.998639)
+bones/5/rotation = Quaternion(-0.00128455, 0.0116081, 0.0168259, 0.99979)
+bones/6/rotation = Quaternion(0.102925, 0.00993208, 0.00794419, 0.994608)
+bones/7/rotation = Quaternion(-0.012859, 0.0236108, 0.323258, 0.945929)
+bones/8/rotation = Quaternion(0.0120575, 0.00929193, 0.247472, 0.968775)
+bones/10/rotation = Quaternion(-0.0357539, 0.000400032, -0.00636763, 0.99934)
+bones/11/rotation = Quaternion(-0.00264964, 0.00114471, 0.125992, 0.992027)
+bones/12/rotation = Quaternion(0.0394225, -0.00193393, 0.228074, 0.972843)
+bones/13/rotation = Quaternion(-0.0123395, 0.00881294, 0.280669, 0.959685)
+bones/15/rotation = Quaternion(-0.0702656, -0.0101908, 0.0243307, 0.99718)
+bones/16/rotation = Quaternion(-0.0320634, 0.00223624, 0.0686366, 0.997124)
+bones/17/rotation = Quaternion(0.0253452, -0.00812462, 0.249005, 0.968136)
+bones/18/rotation = Quaternion(0.00252233, -0.00788073, 0.243204, 0.96994)
+bones/20/rotation = Quaternion(-0.0917369, -0.0203027, 0.010183, 0.995524)
+bones/21/rotation = Quaternion(-0.0625182, 0.000225721, 0.115393, 0.991351)
+bones/22/rotation = Quaternion(0.0585786, -0.0216483, 0.269905, 0.96086)
+bones/23/rotation = Quaternion(0.00687177, 0.00357275, 0.211953, 0.977249)
+
+[node name="BoneAttachment3D" parent="XROrigin3D/RightHand/CollisionHandRight/RightHand/Hand_Nails_low_R/Armature/Skeleton3D" index="1"]
+transform = Transform3D(0.540829, -0.840813, 0.0231736, 0.0826268, 0.0805242, 0.993322, -0.837064, -0.535303, 0.113024, -0.039902, 0.0402828, -0.150096)
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/CollisionHandRight/RightHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_tvuhd")
+tree_root = SubResource("AnimationNodeBlendTree_pmc87")
 
 [node name="World" type="Node3D" parent="." index="1"]
 
@@ -234,99 +288,94 @@ mesh = SubResource("SphereMesh_6ysum")
 transform = Transform3D(1, -1.42492e-07, 0, 3.63216e-08, 1, 0, 0, 1.49012e-08, 1, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_f4wyk")
 
-[node name="HouseEntrance" type="Node3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.6)
-visible = false
-
-[node name="Exterior" type="CSGPolygon3D" parent="HouseEntrance" index="0"]
-use_collision = true
-polygon = PackedVector2Array(-3, 0, -3, 3, 0, 5, 3, 3, 3, 0, 0.5, 0, 0.5, 3, -0.5, 3, -0.5, 0)
-material = ExtResource("4_yw2go")
-
-[node name="Door" type="StaticBody3D" parent="HouseEntrance" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.5)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="HouseEntrance/Door" index="0"]
-mesh = SubResource("BoxMesh_s0cu3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HouseEntrance/Door" index="1"]
-shape = SubResource("BoxShape3D_lsqhn")
-
-[node name="ToHouseInterior" parent="." index="3" instance=ExtResource("7_omnq0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.7)
-visible = false
-zone_scene = "res://game/zones/house_interior/house_interior_zone.tscn"
-spawn_node_name = "FromOutside"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ToHouseInterior" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
-shape = SubResource("BoxShape3D_wdgkd")
-
-[node name="FromHouseInterior" type="Marker3D" parent="." index="4"]
+[node name="FromHouseInterior" type="Marker3D" parent="." index="2"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -7.6)
 visible = false
 
-[node name="Rock1" parent="." index="5" instance=ExtResource("12_cxbia")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.02816, 0.159056, 5.29193)
-visible = false
-item_id = "rock_outside_1"
-
-[node name="Rock2" parent="." index="6" instance=ExtResource("12_cxbia")]
-transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 4.52816, 0.159056, 5.29193)
-visible = false
-item_id = "rock_outside_2"
-
-[node name="Rock3" parent="." index="7" instance=ExtResource("12_cxbia")]
-transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, 4.82816, 0.159056, 5.69193)
-visible = false
-item_id = "rock_outside_3"
-
-[node name="Crate1" parent="." index="8" instance=ExtResource("13_mtgv7")]
-transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -6, 0.5, -8.6)
-visible = false
-item_id = "crate_outside_1"
-
-[node name="Crate2" parent="." index="9" instance=ExtResource("13_mtgv7")]
-transform = Transform3D(0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, 0.996195, -4.7, 0.5, -8.6)
-visible = false
-item_id = "crate_outside_2"
-
-[node name="Crate3" parent="." index="10" instance=ExtResource("13_mtgv7")]
-transform = Transform3D(1, 0, -2.23517e-08, 0, 1, 0, 2.23517e-08, 0, 1, -5.4, 1.5, -8.6)
-visible = false
-item_id = "crate_outside_3"
-
-[node name="StorageBox" parent="." index="11" instance=ExtResource("13_galon")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -9)
-visible = false
-
-[node name="Toolbox" parent="." index="12" instance=ExtResource("14_68l3l")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 6, 0.117771, 4)
-visible = false
-
-[node name="Table" parent="." index="13" instance=ExtResource("14_0wjmx")]
+[node name="Table" parent="." index="3" instance=ExtResource("14_0wjmx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0779805, 0, -1.89283)
 
-[node name="Card" parent="." index="14" instance=ExtResource("15_eniy3")]
+[node name="Card" parent="." index="4" instance=ExtResource("15_eniy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159935, 0.789299, -1.544)
 
-[node name="Card2" parent="." index="15" instance=ExtResource("15_eniy3")]
+[node name="Card2" parent="." index="5" instance=ExtResource("15_eniy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.245418, 0.756744, -1.544)
 
-[node name="Card3" parent="." index="16" instance=ExtResource("15_eniy3")]
+[node name="Card3" parent="." index="6" instance=ExtResource("15_eniy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.326901, 0.756744, -1.544)
 
-[node name="Card4" parent="." index="17" instance=ExtResource("15_eniy3")]
+[node name="Card4" parent="." index="7" instance=ExtResource("15_eniy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408636, 0.756744, -1.544)
 
-[node name="Card5" parent="." index="18" instance=ExtResource("15_eniy3")]
+[node name="Card5" parent="." index="8" instance=ExtResource("15_eniy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487104, 0.756744, -1.544)
 
-[node name="Rock" parent="." index="19" instance=ExtResource("12_cxbia")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.41707, 0.396311, -2.51254)
+[node name="network_main" parent="." index="9" instance=ExtResource("9_qe2b5")]
+
+[node name="Screen" parent="network_main" index="0" instance=ExtResource("16_okaiu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -3)
+update_mode = 2
+throttle_fps = 15.0
+unshaded = true
+
+[node name="Network" type="CenterContainer" parent="network_main/Screen/Viewport" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="network_main/Screen/Viewport/Network" index="0"]
+layout_mode = 2
+
+[node name="NetworkInfo" type="VBoxContainer" parent="network_main/Screen/Viewport/Network/VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="NetworkSide" type="Label" parent="network_main/Screen/Viewport/Network/VBoxContainer/NetworkInfo" index="0"]
+layout_mode = 2
+text = "NetworkSide"
+
+[node name="UniquePeerID" type="Label" parent="network_main/Screen/Viewport/Network/VBoxContainer/NetworkInfo" index="1"]
+layout_mode = 2
+text = "Unique Peer ID"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="network_main/Screen/Viewport/Network/VBoxContainer" index="1"]
+layout_mode = 2
+
+[node name="HostBtn" type="Button" parent="network_main/Screen/Viewport/Network/VBoxContainer/VBoxContainer" index="0"]
+layout_mode = 2
+text = "Host"
+
+[node name="JoinBtn" type="Button" parent="network_main/Screen/Viewport/Network/VBoxContainer/VBoxContainer" index="1"]
+layout_mode = 2
+text = "Join"
+
+[node name="Screen" parent="network_main/Screen" index="1"]
+mesh = SubResource("QuadMesh_hlifd")
+surface_material_override/0 = SubResource("StandardMaterial3D_cfqbg")
+
+[node name="CollisionShape3D" parent="network_main/Screen/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_7r2do")
+
+[node name="CardA" parent="." index="10" instance=ExtResource("11_pmr0i")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, -0.160247, 1.17406, -2.28662)
 visible = false
+
+[node name="CardB" parent="." index="11" instance=ExtResource("12_n25ne")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0, 1.17406, -2.28662)
+visible = false
+
+[node name="CardC" parent="." index="12" instance=ExtResource("13_2hm4j")]
+transform = Transform3D(2, 0, 0, 0, -8.74228e-08, -2, 0, 2, -8.74228e-08, 0.170978, 1.17406, -2.28662)
+visible = false
+
+[connection signal="QrRead" from="XROrigin3D/LeftHand/CollisionHandLeft/FunctionPointer" to="network_main" method="_on_function_pointer_qr_read"]
+[connection signal="QrRead" from="XROrigin3D/RightHand/CollisionHandRight/FunctionPointer" to="network_main" method="_on_function_pointer_qr_read"]
+[connection signal="pressed" from="network_main/Screen/Viewport/Network/VBoxContainer/VBoxContainer/HostBtn" to="network_main" method="_on_host_btn_pressed"]
+[connection signal="pressed" from="network_main/Screen/Viewport/Network/VBoxContainer/VBoxContainer/JoinBtn" to="network_main" method="_on_join_btn_pressed"]
 
 [editable path="XROrigin3D/LeftHand/CollisionHandLeft/LeftHand"]
 [editable path="XROrigin3D/LeftHand/CollisionHandLeft/LeftHand/Hand_Nails_low_L"]
 [editable path="XROrigin3D/RightHand/CollisionHandRight/RightHand"]
 [editable path="XROrigin3D/RightHand/CollisionHandRight/RightHand/Hand_Nails_low_R"]
+[editable path="network_main/Screen"]

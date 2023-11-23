@@ -225,3 +225,7 @@ static func is_item_held_by_zone(node : Node) -> bool:
 	# Node is held by a non-persistent mechanism in the zone
 	push_warning("Item ", node.item_id, " held by non-persistent ", node.picked_up_by)
 	return true
+
+
+func _on_host_btn_pressed():
+	pass # Replace with function body.

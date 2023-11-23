@@ -33,6 +33,10 @@ signal hand_scale_changed(scale)
 ## Name of the Trigger action in the OpenXR Action Map.
 @export var trigger_action : String = "trigger"
 
+## Name of the Primary click action in the OpenXR Action Map.
+@export var primary_action : String = "primary_click"
+
+
 
 ## Last world scale (for scaling hands)
 var _last_world_scale : float = 1.0

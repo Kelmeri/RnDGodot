@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qmcth4ysh78e"]
+
+[ext_resource type="Script" path="res://network_main.gd" id="1_fo3id"]
+
+[node name="network_main" type="Node3D"]
+script = ExtResource("1_fo3id")

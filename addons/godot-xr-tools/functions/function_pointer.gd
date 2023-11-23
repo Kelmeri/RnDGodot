@@ -17,6 +17,9 @@ extends Node3D
 ## Signal emitted when this object points at another object
 signal pointing_event(event)
 
+## Signal emitted when qrcode is read
+signal QrRead(i)
+
 
 ## Enumeration of laser show modes
 enum LaserShow {
@@ -121,6 +124,9 @@ var _controller  : XRController3D
 
 # The currently active controller
 var _active_controller : XRController3D
+
+# qrcode value
+var qr_code_value : int = -1
 
 
 ## Add support for is_xr_class on XRTools classes
@@ -415,22 +421,7 @@ func _update_pointer() -> void:
 
 # Pointer-activation button pressed handler
 func _button_pressed() -> void:
-	var localized_ScreenShotterPath = "res://assets/ScreenShotter/ScreenShotter.exe"
-	var os_path = ProjectSettings.globalize_path(localized_ScreenShotterPath)
-	print (localized_ScreenShotterPath)
-	var output = []
-	await OS.execute(os_path, [], output, true)
-	print (output)
-	if output == [["1/r/n"]]:
-		print ("1")
-	elif output == [["2/r/n"]]:
-		print ("2")
-	elif output == [["3/r/n"]]:
-		print ("3")
-	elif output == [["4/r/n"]]:
-		print ("4")
-	else:
-		print (output)
+	
 
 	
 	if $RayCast.is_colliding():
@@ -438,6 +429,37 @@ func _button_pressed() -> void:
 		target = $RayCast.get_collider()
 		last_collided_at = $RayCast.get_collision_point()
 		XRToolsPointerEvent.pressed(self, target, last_collided_at)
+	else:
+		var localized_ScreenShotterPath = "res://assets/ScreenShotter/ScreenShotter.exe"
+		var os_path = ProjectSettings.globalize_path(localized_ScreenShotterPath)
+		print (localized_ScreenShotterPath)
+		var output = []
+		await OS.execute(os_path, [], output, true)
+		if output.has("1\r\n"):
+			var i = 1
+			qr_code_value = i
+			emit_signal("QrRead", i)
+			print ("1")
+		elif output.has("2\r\n"):
+			var i = 2			
+			emit_signal("QrRead", i)
+			qr_code_value = 2
+			print ("2")
+		elif output.has("3\r\n"):
+			var i = 3
+			emit_signal("QrRead", i)
+			qr_code_value = 3
+			print ("3")
+		elif output.has("4\r\n"):
+			var i = 4
+			emit_signal("QrRead", i)
+			qr_code_value = 4
+			print ("4")
+		else:
+			print (output)
+			var i = -1
+			emit_signal("QrRead", i)
+			qr_code_value = -1
 
 # func process_openxr_frame(frame):
 

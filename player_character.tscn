@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://by6yjw5kg15e5"]
+
+[ext_resource type="Script" path="res://player_character.gd" id="1_qnq1k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ttglg"]
+
+[node name="player_character" type="MeshInstance3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("SphereMesh_ttglg")
+script = ExtResource("1_qnq1k")
+
+[node name="Name" type="Label3D" parent="."]
+
+[node name="Message" type="Label3D" parent="."]
