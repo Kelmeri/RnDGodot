@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://b657mt25b0bfn"]
+
+[ext_resource type="Texture2D" uid="uid://512a2lis3lnh" path="res://assets/Textures/table_high/table_high_DefaultMaterial_BaseColor.png" id="1_bcygb"]
+[ext_resource type="Texture2D" uid="uid://dfilisbs7x60" path="res://assets/Textures/table_high/table_high_DefaultMaterial_Height.png" id="2_ukw61"]
+[ext_resource type="Texture2D" uid="uid://u1wm1pm7wpf0" path="res://assets/Textures/table_high/table_high_DefaultMaterial_Metallic.png" id="3_uax5v"]
+[ext_resource type="Texture2D" uid="uid://cosdua1fkheoj" path="res://assets/Textures/table_high/table_high_DefaultMaterial_Normal.png" id="4_7c8tu"]
+[ext_resource type="Texture2D" uid="uid://1te46fexfl4h" path="res://assets/Textures/table_high/table_high_DefaultMaterial_Roughness.png" id="5_3lnvv"]
+
+[resource]
+albedo_texture = ExtResource("1_bcygb")
+metallic = 1.0
+metallic_texture = ExtResource("3_uax5v")
+roughness_texture = ExtResource("5_3lnvv")
+normal_enabled = true
+normal_texture = ExtResource("4_7c8tu")
+heightmap_enabled = true
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("2_ukw61")

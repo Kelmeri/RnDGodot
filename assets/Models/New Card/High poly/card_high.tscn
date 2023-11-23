@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0upwxg75cgwb"]
+
+[ext_resource type="PackedScene" uid="uid://dmgub5bhfuqau" path="res://assets/Models/New Card/High poly/card_high.fbx" id="1_fhaay"]
+[ext_resource type="Material" uid="uid://1ydjg2kjmcop" path="res://assets/Materials/M_card_high.tres" id="2_1j3j7"]
+
+[node name="card_high" instance=ExtResource("1_fhaay")]
+
+[node name="Card_high" parent="RootNode" index="0"]
+surface_material_override/0 = ExtResource("2_1j3j7")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://da0veiqkp8pfp"]
+
+[ext_resource type="PackedScene" uid="uid://b7gr7y8g5l2m3" path="res://assets/Models/New Table/High poly/table_high.fbx" id="1_fgcnw"]
+[ext_resource type="PackedScene" uid="uid://kmnp2wds3s5a" path="res://assets/Models/New Table/High poly/table_high.tscn" id="2_wjd2o"]
+[ext_resource type="PackedScene" uid="uid://bymi2oq3pblf6" path="res://assets/Models/New Table/Low poly/table_low.fbx" id="3_mcsup"]
+[ext_resource type="PackedScene" uid="uid://hguhbkhqn75f" path="res://assets/Models/New Table/Low poly/table_low.tscn" id="4_c8l0w"]
+[ext_resource type="PackedScene" uid="uid://d0upwxg75cgwb" path="res://assets/Models/New Card/High poly/card_high.tscn" id="5_blqi7"]
+[ext_resource type="PackedScene" uid="uid://dvjwy8tp7l8re" path="res://assets/Models/New Card/Low poly/card_low.tscn" id="6_u0kkr"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="table_high" parent="." instance=ExtResource("1_fgcnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.261208, 0, -1.81149)
+
+[node name="table_high2" parent="." instance=ExtResource("2_wjd2o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.48328, 0, -1.82842)
+
+[node name="table_low" parent="." instance=ExtResource("3_mcsup")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25795, 0, 0.310659)
+
+[node name="table_low2" parent="." instance=ExtResource("4_c8l0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44785, 0, 0.358008)
+
+[node name="card_high" parent="." instance=ExtResource("5_blqi7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2336, 0.722924, -1.3643)
+
+[node name="card_high2" parent="." instance=ExtResource("5_blqi7")]
+transform = Transform3D(0.336454, 0, 0.9417, 0, 1, 0, -0.9417, 0, 0.336454, 2.26532, 0.723432, -1.35742)
+
+[node name="card_high3" parent="." instance=ExtResource("5_blqi7")]
+transform = Transform3D(0.52229, 0, 0.852768, 0, 1, 0, -0.852768, 0, 0.52229, 2.28829, 0.723945, -1.34511)
+
+[node name="card_high4" parent="." instance=ExtResource("5_blqi7")]
+transform = Transform3D(0.681405, 0.00578416, 0.731884, -0.000901633, 0.999975, -0.00706347, -0.731906, 0.00415319, 0.681393, 2.32086, 0.723945, -1.32115)
+
+[node name="card_low" parent="." instance=ExtResource("6_u0kkr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2, 0.72192, 0.847412)
+
+[node name="card_low2" parent="." instance=ExtResource("6_u0kkr")]
+transform = Transform3D(0.230169, 0, 0.973151, 0, 1, 0, -0.973151, 0, 0.230169, 2.02549, 0.722506, 0.847412)
+
+[node name="card_low3" parent="." instance=ExtResource("6_u0kkr")]
+transform = Transform3D(0.412564, 0, 0.910929, 0, 1, 0, -0.910929, 0, 0.412564, 2.04858, 0.723096, 0.85565)
+
+[node name="card_low4" parent="." instance=ExtResource("6_u0kkr")]
+transform = Transform3D(0.438151, 0, 0.898901, 0, 1, 0, -0.898901, 0, 0.438151, 2.07468, 0.725964, 0.864123)
