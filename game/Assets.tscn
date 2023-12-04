@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://da0veiqkp8pfp"]
+[gd_scene load_steps=11 format=3 uid="uid://da0veiqkp8pfp"]
 
 [ext_resource type="PackedScene" uid="uid://bgyxch6bb13ym" path="res://assets/Models/lantern.tscn" id="7_xlfmk"]
 [ext_resource type="PackedScene" uid="uid://dmpnjc0a8kcrw" path="res://assets/Models/support.tscn" id="8_5snm5"]
 [ext_resource type="PackedScene" uid="uid://dtudoluw8k37s" path="res://assets/Models/barrel_3.tscn" id="9_5utr3"]
 [ext_resource type="PackedScene" uid="uid://dr1q1g470m2xe" path="res://assets/Models/support_beam.tscn" id="9_fpfjs"]
+[ext_resource type="PackedScene" uid="uid://mhfwujyeo7su" path="res://assets/Models/New Chair/Low poly/chair_lowpoly.tscn" id="10_mkp2j"]
 [ext_resource type="PackedScene" uid="uid://bah5605ib7ttt" path="res://assets/Models/wall.tscn" id="10_uctng"]
 [ext_resource type="PackedScene" uid="uid://gomd7owjmum8" path="res://assets/Models/wine_bottle_holder.tscn" id="11_np01o"]
 [ext_resource type="PackedScene" uid="uid://c62xfx1ri6hea" path="res://assets/Models/New Table GLTF/table_low.tscn" id="12_dtn61"]
@@ -182,3 +183,6 @@ transform = Transform3D(0.27, 0, 0, 0, -1.18021e-08, -0.27, 0, 0.27, -1.18021e-0
 
 [node name="barrel7" parent="." instance=ExtResource("9_5utr3")]
 transform = Transform3D(0.27, 0, 0, 0, -1.18021e-08, -0.27, 0, 0.27, -1.18021e-08, -1.55161, 1.70827, -4.21814)
+
+[node name="chair_lowpoly" parent="." instance=ExtResource("10_mkp2j")]
+transform = Transform3D(-0.996103, 0, -0.0881989, 0, 1, 0, 0.0881989, 0, -0.996103, 2.33184, 0.0574646, 1.14564)
