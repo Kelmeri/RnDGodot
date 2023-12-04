@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c62xfx1ri6hea"]
+
+[ext_resource type="PackedScene" uid="uid://do4ag1hhtwamx" path="res://assets/Models/New Table GLTF/table_low.gltf" id="1_d3nyv"]
+[ext_resource type="Material" uid="uid://cgox6iuonbvpg" path="res://assets/Materials/M_table_low.tres" id="2_ef6k3"]
+
+[node name="table_low" instance=ExtResource("1_d3nyv")]
+
+[node name="Table_low" parent="." index="0"]
+material_override = ExtResource("2_ef6k3")

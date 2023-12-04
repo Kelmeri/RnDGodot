@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://u7lowh72nn7x"]
+
+[ext_resource type="Texture2D" uid="uid://dqoiqujftcjic" path="res://assets/Textures/Lantern/Lantern_DefaultMaterial_BaseColor.png" id="1_r13ky"]
+[ext_resource type="Texture2D" uid="uid://dfr6i243o3672" path="res://assets/Textures/Lantern/Lantern_DefaultMaterial_Height.png" id="2_r6mkd"]
+[ext_resource type="Texture2D" uid="uid://dfcicsru4rk3u" path="res://assets/Textures/Lantern/Lantern_DefaultMaterial_Metallic.png" id="3_a02yh"]
+[ext_resource type="Texture2D" uid="uid://cm1hur5hdesm0" path="res://assets/Textures/Lantern/Lantern_DefaultMaterial_Normal.png" id="4_56kc3"]
+[ext_resource type="Texture2D" uid="uid://cxqeqgt1rm1ja" path="res://assets/Textures/Lantern/Lantern_DefaultMaterial_Roughness.png" id="5_d8pmr"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_r13ky")
+metallic = 1.0
+metallic_texture = ExtResource("3_a02yh")
+roughness_texture = ExtResource("5_d8pmr")
+normal_enabled = true
+normal_texture = ExtResource("4_56kc3")
+heightmap_scale = 11.167
+heightmap_texture = ExtResource("2_r6mkd")
