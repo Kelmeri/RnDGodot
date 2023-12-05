@@ -3,7 +3,7 @@ extends Node3D
 var multiplayer_peer = ENetMultiplayerPeer.new()
 
 const PORT = 9999
-const ADDRESS = "127.0.0.1"
+const ADDRESS = "172.24.18.74"
 
 var connected_peer_ids = []
 var local_player_character
