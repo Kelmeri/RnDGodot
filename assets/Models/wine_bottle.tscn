@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfwgch3644nvy"]
+
+[ext_resource type="PackedScene" uid="uid://immrn83be8fa" path="res://assets/Models/Wine_bottle.gltf" id="1_pif3a"]
+[ext_resource type="Material" uid="uid://m1rhndf1q2mc" path="res://assets/Materials/WineBottle.tres" id="2_p01sw"]
+
+[node name="Wine_bottle" instance=ExtResource("1_pif3a")]
+
+[node name="WineBottle" parent="." index="0"]
+material_override = ExtResource("2_p01sw")

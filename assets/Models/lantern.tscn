@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgyxch6bb13ym"]
+
+[ext_resource type="PackedScene" uid="uid://biljhe2kw7lio" path="res://assets/Models/Lantern.gltf" id="1_j1853"]
+[ext_resource type="Material" uid="uid://u7lowh72nn7x" path="res://assets/Materials/Lantern.tres" id="2_vxwyn"]
+
+[node name="Lantern" instance=ExtResource("1_j1853")]
+
+[node name="Lantern2" parent="." index="0"]
+material_override = ExtResource("2_vxwyn")

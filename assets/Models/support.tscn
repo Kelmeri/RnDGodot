@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmpnjc0a8kcrw"]
+
+[ext_resource type="PackedScene" uid="uid://l8krvl3mbk12" path="res://assets/Models/Support.gltf" id="1_c3ral"]
+[ext_resource type="Material" uid="uid://dufx84uiogdtr" path="res://assets/Materials/Support.tres" id="2_h07vy"]
+
+[node name="Support" instance=ExtResource("1_c3ral")]
+
+[node name="Support2" parent="." index="0"]
+material_override = ExtResource("2_h07vy")

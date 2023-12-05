@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cl4r6w2185ik5"]
+
+[ext_resource type="Texture2D" uid="uid://ch6eph3hkfo68" path="res://assets/Textures/SupportBeam/Supportbeam_DefaultMaterial_BaseColor.png" id="1_prqva"]
+[ext_resource type="Texture2D" uid="uid://bu7wputmx1nn0" path="res://assets/Textures/Support/Support_DefaultMaterial_Height.png" id="2_8jl2c"]
+[ext_resource type="Texture2D" uid="uid://bql6wkxxv30xm" path="res://assets/Textures/SupportBeam/Supportbeam_DefaultMaterial_Metallic.png" id="3_bl35x"]
+[ext_resource type="Texture2D" uid="uid://bkpyugwcc6xfx" path="res://assets/Textures/SupportBeam/Supportbeam_DefaultMaterial_Normal.png" id="4_k6qnj"]
+[ext_resource type="Texture2D" uid="uid://dxyv8up5k8aim" path="res://assets/Textures/SupportBeam/Supportbeam_DefaultMaterial_Roughness.png" id="5_otnmv"]
+
+[resource]
+albedo_texture = ExtResource("1_prqva")
+metallic = 1.0
+metallic_texture = ExtResource("3_bl35x")
+roughness_texture = ExtResource("5_otnmv")
+normal_enabled = true
+normal_texture = ExtResource("4_k6qnj")
+heightmap_texture = ExtResource("2_8jl2c")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr1q1g470m2xe"]
+
+[ext_resource type="PackedScene" uid="uid://dyudkhcs5cu55" path="res://assets/Models/SupportBeam.gltf" id="1_fdfcm"]
+[ext_resource type="Material" uid="uid://cl4r6w2185ik5" path="res://assets/Materials/SupportBeam.tres" id="2_rq16t"]
+
+[node name="SupportBeam" instance=ExtResource("1_fdfcm")]
+
+[node name="SupportBeam2" parent="." index="0"]
+material_override = ExtResource("2_rq16t")
