@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://mhfwujyeo7su"]
+[gd_scene load_steps=4 format=3 uid="uid://1263rk4uq6ga"]
 
-[ext_resource type="PackedScene" uid="uid://8nfy2c3ggxog" path="res://assets/Models/New Chair/Low poly/chair_lowpoly.glb" id="1_eh4of"]
+[ext_resource type="PackedScene" uid="uid://mvfwfqqxtd1f" path="res://assets/Models/New Chair/Low poly/chair_lowpoly.glb" id="1_eh4of"]
 [ext_resource type="Material" uid="uid://cwm1kvgm0xqxk" path="res://assets/Materials/M_chair_low_wood.tres" id="2_puna2"]
 [ext_resource type="Material" uid="uid://bqdm0jmvu778s" path="res://assets/Materials/M_chair_low_base.tres" id="2_vovpw"]
 
