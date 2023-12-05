@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://esat1nbmuo6j" path="res://assets/Textures/WineBottle/Wine_bottle_DefaultMaterial_Roughness.png" id="5_qgiko"]
 
 [resource]
+transparency = 1
 albedo_texture = ExtResource("1_gvuos")
 metallic = 1.0
 metallic_texture = ExtResource("3_3ravg")

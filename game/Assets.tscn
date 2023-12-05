@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dmpnjc0a8kcrw" path="res://assets/Models/support.tscn" id="8_5snm5"]
 [ext_resource type="PackedScene" uid="uid://dtudoluw8k37s" path="res://assets/Models/barrel_3.tscn" id="9_5utr3"]
 [ext_resource type="PackedScene" uid="uid://dr1q1g470m2xe" path="res://assets/Models/support_beam.tscn" id="9_fpfjs"]
-[ext_resource type="PackedScene" uid="uid://mhfwujyeo7su" path="res://assets/Models/New Chair/Low poly/chair_lowpoly.tscn" id="10_mkp2j"]
+[ext_resource type="PackedScene" uid="uid://1263rk4uq6ga" path="res://assets/Models/New Chair/Low poly/chair_lowpoly.tscn" id="10_mkp2j"]
 [ext_resource type="PackedScene" uid="uid://bah5605ib7ttt" path="res://assets/Models/wall.tscn" id="10_uctng"]
 [ext_resource type="PackedScene" uid="uid://gomd7owjmum8" path="res://assets/Models/wine_bottle_holder.tscn" id="11_np01o"]
 [ext_resource type="PackedScene" uid="uid://c62xfx1ri6hea" path="res://assets/Models/New Table GLTF/table_low.tscn" id="12_dtn61"]
@@ -15,7 +15,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000672102, 0.0309186, 0.00995445)
 
 [node name="Lantern" parent="." instance=ExtResource("7_xlfmk")]
-transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 2.91239, 0.709499, 0.319821)
+transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 1.03332, 0.709499, 0.319821)
 
 [node name="Support" parent="." instance=ExtResource("8_5snm5")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.88514, 0, -2.89754)
@@ -84,7 +84,7 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 5.79134,
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 1.93342, 0.0580489, -4.34277)
 
 [node name="table_low3" parent="." instance=ExtResource("12_dtn61")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38754, -0.00836754, 0.161501)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50847, -0.00836754, 0.161501)
 
 [node name="Floor" parent="." instance=ExtResource("13_sbpnm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3343, 0, -2.45174)
@@ -185,4 +185,4 @@ transform = Transform3D(0.27, 0, 0, 0, -1.18021e-08, -0.27, 0, 0.27, -1.18021e-0
 transform = Transform3D(0.27, 0, 0, 0, -1.18021e-08, -0.27, 0, 0.27, -1.18021e-08, -1.55161, 1.70827, -4.21814)
 
 [node name="chair_lowpoly" parent="." instance=ExtResource("10_mkp2j")]
-transform = Transform3D(-0.996103, 0, -0.0881989, 0, 1, 0, 0.0881989, 0, -0.996103, 2.33184, 0.0574646, 1.14564)
+transform = Transform3D(-0.996103, 0, -0.0881989, 0, 1, 0, 0.0881989, 0, -0.996103, 0.45277, 0.0574646, 1.14564)
